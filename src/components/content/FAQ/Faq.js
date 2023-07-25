@@ -26,7 +26,7 @@ export default function Faq() {
     };
 
     return (
-        <div className='faq'>
+        <div id='FAQ' className='faq'>
             <div className='container'>
                 <div className='faq__title tlt vetrino'>
                     <h2>FAQ</h2>

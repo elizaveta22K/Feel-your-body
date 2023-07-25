@@ -1,25 +1,49 @@
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import HeaderMain from "./components/content/HeaderMain/HeaderMain";
-import Training from "./components/content/Training/Training";
-import Whom from "./components/content/Whom/Whom";
-import Trainer from "./components/content/Trainer/Trainer";
-import Reviews from "./components/content/Reviews/Reviews";
-import Faq from "./components/content/FAQ/Faq";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Main from './components/Main/Main';
+import UserAccount from './components/UserAccount/UserAccount';
+
+const navigation = {
+    mainNav: [
+        {
+            type: 'pseudoLink',
+            title: 'Тренування',
+            href: 'training',
+        },
+        {
+            type: 'pseudoLink',
+            title: 'Тренери',
+            href: 'trainers',
+        },
+        {
+            type: 'pseudoLink',
+            title: 'FAQ',
+            href: 'FAQ',
+        },
+        {
+            type: 'link',
+            title: 'Мій кабінет',
+            href: '/profile',
+        },
+    ],
+};
 
 function App() {
-  return (
-    <div className="wrapper">
-      <Header />
-      <HeaderMain />
-      <Training />
-      <Whom />
-      <Trainer />
-      <Reviews />
-		<Faq />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className='wrapper'>
+            <Router>
+                <Header data={navigation} />
+                <Routes>
+                    <Route exact path='/' element={<Main />} />
+                    <Route path='/profile' element={<UserAccount />} />
+                </Routes>
+
+                <Footer />
+            </Router>
+        </div>
+    );
 }
 
 export default App;
