@@ -1,0 +1,10 @@
+.training {
+	margin: 150px 0 150px 0;
+}
+.carusel-block {
+	text-align: center;
+}
+.carusel-block__img img {
+	border-radius: 200px 0px;
+	max-width: 100%;
+}

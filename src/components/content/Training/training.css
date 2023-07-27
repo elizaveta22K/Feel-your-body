@@ -114,26 +114,7 @@
 	align-items: center;
 	flex-wrap: wrap;
 }
-.button-training__blu {
-	background-color: #1E7689;
-	border: 2px solid var(--beige, #FFEDE4);	
-	display: block;
-	font-size: 20px;
-	font-weight: 500;
-	padding: 15px 25px;
-	transition: all 0.3s ease 0s;
-}
-.button-training__blu a{
-	color:  #FFEDE4;
-}
-.button-training__blu a:hover{
-	color: #1E7689;
-}
-.button-training__blu:hover{
-	background-color:  #FFEDE4;
-	border: none;
-	box-shadow: none;
-}
+
 @media screen and (max-width: 1000px) {
 	.training-block {
 		padding:  50px 33px;
