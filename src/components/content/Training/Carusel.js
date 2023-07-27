@@ -3,9 +3,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import healthyPhoto from '../../../img/photo/training/photo5.jpg';
+import sexyPhoto from '../../../img/photo/training/photo2.jpg';
+import functionalPhoto from '../../../img/photo/training/photo4.jpg';
+import stretchingPhoto from '../../../img/photo/training/photo1.jpg';
+import kidsPhoto from '../../../img/photo/training/photo3.jpg';
 import './training.css';
 import './carusel.css';
-
 
 import reviewsArrow from '../../../img/components/icon6.png';
 
@@ -81,7 +84,84 @@ export default function Carusel() {
                         </div>
                         <div className=''>
                             <a href='' className='button-training__blu'>
-									 <span>Детальніше</span>
+                                <span>Детальніше</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className='carusel-block'>
+                        <div className='carusel-block__img'>
+                            <img className='' src={sexyPhoto} alt='Photo'></img>
+                        </div>
+                        <div className='info-training__title vetrino'>
+                            SEXY сідниці
+                        </div>
+                        <div className='info-training__subtitle carusel-block__sub'>
+                            Тренуємось та створюємо омріяні пружні сідниці та
+                            здорове тіло!
+                        </div>
+                        <div className='carusel-block__btn'>
+                            <a href='' className='button-training__blu'>
+                                <span>Детальніше</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className='carusel-block'>
+                        <div className='carusel-block__img'>
+                            <img
+                                className=''
+                                src={functionalPhoto}
+                                alt='Photo'
+                            ></img>
+                        </div>
+                        <div className='info-training__title vetrino'>
+                            Functional training
+                        </div>
+                        <div className='info-training__subtitle'>
+                            Інтенсивне функціональне тренування, що подарує вам
+                            бажаний результат!
+                        </div>
+                        <div className='carusel-block__btn'>
+                            <a href='' className='button-training__blu'>
+                                <span>Детальніше</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className='carusel-block'>
+                        <div className='carusel-block__img'>
+                            <img
+                                className=''
+                                src={stretchingPhoto}
+                                alt='Photo'
+                            ></img>
+                        </div>
+                        <div className='info-training__title vetrino'>
+                            Stretching
+                        </div>
+                        <div className='info-training__subtitle'>
+                            Ефективні тренування для розвитку гнучкості без
+                            шкоди для здоров‘я
+                        </div>
+                        <div className='carusel-block__btn'>
+                            <a href='' className='button-training__blu'>
+                                <span>Детальніше</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className='carusel-block'>
+                        <div className='carusel-block__img'>
+                            <img className='' src={kidsPhoto} alt='Photo'></img>
+                        </div>
+                        <div className='info-training__title vetrino'>
+                            Stretching KIDS
+                        </div>
+                        <div className='info-training__subtitle'>
+                            Тренування, яке включає в себе велику кількість
+                            різних вправ, що сприяють розвитку фізичних
+                            здібностей дитини
+                        </div>
+                        <div className='carusel-block__btn kids'>
+                            <a href='' className='button-training__blu'>
+                                <span>Детальніше</span>
                             </a>
                         </div>
                     </div>
