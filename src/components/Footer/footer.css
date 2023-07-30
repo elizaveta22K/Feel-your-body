@@ -1,49 +1,59 @@
 .footer {
-	padding: 30px 0 90px 0;
-    background-color: #ffede4;
+    padding: 30px 0 90px 0;
+    background-color: var(--second-bg);
 }
+
 .footer__block-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .footer-main {
     flex: 0 1 25%;
 }
+
 .footer__menu_items a {
     font-size: 20px;
     color: #011e26;
 }
+
 .footer__menu li:not(:last-child) {
     margin: 0px 0px 15px 0px;
 }
+
 .footer__inst_name {
     color: #011e26;
     font-size: 20px;
     font-weight: 400;
-	 margin: 10px 0 0 0;
+    margin: 10px 0 0 0;
 }
+
 .footer__inst_Lyda {
     margin: 0 0 30px 0;
 }
+
 .footer__photo {
     display: flex;
-	 position: relative;
+    position: relative;
 }
+
 .footer__instagram {
     display: flex;
     flex-direction: column;
     justify-content: center;
-	 text-align: center;
+    text-align: center;
 }
+
 .footer__photo_active {
-	margin: 0 0 0 10px;
-	position: absolute;
-	bottom: -135px;
-	right: -80px;
+    margin: 0 0 0 10px;
+    position: absolute;
+    bottom: -135px;
+    right: -80px;
 }
+
 .footer__photo_passive {
-	position: absolute;
-	top: -70px;
-	left: 0;
+    position: absolute;
+    top: -70px;
+    left: 0;
 }
