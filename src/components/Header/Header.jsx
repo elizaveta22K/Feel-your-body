@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-
-import '../Header/header.css';
-import logoImg from '../../img/logo.svg';
 import { Link } from 'react-router-dom';
+
+import './Header.css';
+
+import logoImg from '../../img/logo.svg';
 
 export default function Header({ navigationData }) {
     const [nav, setNav] = useState(false);
