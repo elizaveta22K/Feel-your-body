@@ -4,9 +4,8 @@ import '../Header/header.css';
 import logoImg from '../../img/logo.svg';
 import { Link } from 'react-router-dom';
 
-export default function Header(props) {
+export default function Header({ navigationData }) {
     const [nav, setNav] = useState(false);
-    const mainNav = props.data.mainNav;
 
     const handleHeaderClick = (event) => {
         event.preventDefault();
@@ -65,7 +64,7 @@ export default function Header(props) {
                     <div className='header__nav'>
                         <nav className={`nav__menu ${nav ? 'active' : ''}`}>
                             <ul className='nav__menu_items'>
-                                {mainNav.map((item, index) => {
+                                {navigationData.map((item, index) => {
                                     if (item.type === 'link') {
                                         return (
                                             <li key={index}>
