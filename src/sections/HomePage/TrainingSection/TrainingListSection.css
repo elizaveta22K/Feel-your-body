@@ -31,6 +31,12 @@
     position: absolute;
     top: 0;
     left: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.img-training:hover {
+    width: 102%;
+    height: 102%;
 }
 
 .info-training {
@@ -154,6 +160,17 @@
     }
 }
 
+@media screen and (max-width: 840px) {
+    .button-training {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .button-training__white {
+        margin: 0 0 20px 0;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .training {
         margin: 5px 0 56px 0;
@@ -164,9 +181,12 @@
     }
     .info-training__title {
         font-size: 20px;
+        margin: 0 0 6% 0;
     }
     .info-training__subtitle {
         font-size: 16px;
+		  font-weight: 400;
+        margin: 0 0 6% 0;
     }
     .img-training {
         border-radius: 100px 0px;
@@ -177,14 +197,62 @@
     .training-block {
         padding: 40px 13px;
     }
+    .picture-training__gift {
+        padding: 15px 0 15px 45px;
+    }
+    .img-training {
+        width: 110%;
+        height: 110%;
+    }
+    .picture-training {
+        margin: 0 0 6% 0;
+    }
+    .info-training__price {
+        margin: 0 0 6% 0;
+    }
 }
 
-@media screen and (max-width: 576px) {
-    .training {
-        margin: -15px 0 36px 0;
-    }
+@media screen and (max-width: 600px) {
     .items-training__img {
         min-height: 200px;
         max-width: 290px;
+    }
+    .items-training {
+        flex-direction: column;
+    }
+    .img-training {
+        position: static;
+        margin: 0 0 5% 0;
+    }
+    .training-block {
+        border-radius: 100px 0px;
+        padding: 20px 13px;
+    }
+    .button-training {
+        width: 100%;
+    }
+    .button-training__blu button {
+        width: 85%;
+    }
+    .button-training__white {
+        width: 85%;
+    }
+    .button-training_blu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+	 .button-training__blu {
+		width: 85%;
+	 }
+}
+
+@media screen and (max-width: 480px) {
+    .training {
+        margin: -15px 0 36px 0;
+    }
+    .training-block {
+        border-radius: 60px 0px;
     }
 }

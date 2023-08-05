@@ -11,7 +11,7 @@ const WhomSection = () => (
                 <h2>Для кого</h2>
             </div>
             <div className='whom__info info-whom'>
-                <div className='info-whom__text text-info'>
+                <div className='info-whom__text_right text-info'>
                     <div className='text-info__item'>
                         Тільки починаєш свій шлях та знайомишся зі світом
                         тренувань
@@ -28,7 +28,7 @@ const WhomSection = () => (
                 <div className='info-whom__img'>
                     <img src={whomPhoto} alt='Photo' />
                 </div>
-                <div className='info-whom__text text-info'>
+                <div className='info-whom__text_left text-info'>
                     <div className='text-info__items'>
                         Ти мамуся в декреті та мрієш повернутися до своєї форми
                     </div>

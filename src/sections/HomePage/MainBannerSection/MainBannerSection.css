@@ -77,17 +77,28 @@
     .main-block__img2 {
         display: none;
     }
+
     .main-block__img1 {
         margin: 0 0px 0 0;
-        padding: 0 0 30% 0;
+        padding: 0 0 40% 0;
     }
+
     .title-main_up,
     .title-main_down {
         font-size: 30px;
     }
+
     .title-main_down {
         max-width: 360px;
     }
+
+	 .text-main__button {
+		margin: 9% 0 0 0;
+	 }
+
+	 .title-main_up {
+		margin: 0 0 5% 0;
+	 }
 }
 
 @media screen and (max-width: 576px) {
@@ -99,6 +110,6 @@
         max-width: 250px;
     }
     .main-block__img1 {
-        padding: 0 0 40% 0;
+        padding: 0 0 50% 0;
     }
 }

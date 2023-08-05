@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 
 import Button from '../../../../../components/Button/Button';
 
-const TrainingCard = ({ title, subtitle, photo, time, price, className }) => (
+const TrainingCard = ({
+    title,
+    subtitle,
+    photo,
+    numerosity,
+    time,
+    gift,
+    price,
+    className,
+}) => (
     <div className='training-block'>
         <div className={`training-block__items items-training ${className}`}>
             <div className='items-training__img'>
@@ -13,9 +22,19 @@ const TrainingCard = ({ title, subtitle, photo, time, price, className }) => (
                 <div className='info-training__title vetrino'>{title}</div>
                 <div className='info-training__subtitle'>{subtitle}</div>
                 <div className='info-training__picture picture-training'>
+                    {numerosity && (
+                        <div className='picture-training__number1 picture-training__text'>
+                            {numerosity}
+                        </div>
+                    )}
                     {time && (
                         <div className='picture-training__time picture-training__text'>
                             {time}
+                        </div>
+                    )}
+                    {gift && (
+                        <div className='picture-training__gift picture-training__text'>
+                            {gift}
                         </div>
                     )}
                 </div>
@@ -24,7 +43,7 @@ const TrainingCard = ({ title, subtitle, photo, time, price, className }) => (
                     <div className='btn button-training__white'>
                         <Button>{'Купити'}</Button>
                     </div>
-                    <div>
+                    <div className='button-training_blu'>
                         <Button className='button-training__blu'>
                             {'Детальніше'}
                         </Button>
@@ -39,7 +58,9 @@ TrainingCard.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
+	 numerosity: PropTypes.string,
     time: PropTypes.string,
+	 gift: PropTypes.string,
     price: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
 };

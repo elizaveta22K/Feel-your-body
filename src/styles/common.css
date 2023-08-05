@@ -34,16 +34,17 @@ body {
 
 .btn {
     display: inline-block;
-    font-size: 20px;
-    font-weight: 500;
     padding: 15px 25px;
     background-color: var(--second-bg);
     transition: all 0.3s ease 0s;
     min-width: 175px;
 }
 
-.btn a {
+.btn button {
     color: var(--main-bg);
+    background-color: var(--second-bg);
+    font-size: 20px;
+    font-weight: 500;
 }
 
 .btn:hover {
@@ -61,18 +62,13 @@ body {
     display: block;
     font-size: 20px;
     font-weight: 500;
-    padding: 15px 25px;
+    padding: 13px 23px;
     transition: all 0.3s ease 0s;
-}
-
-/* Liza: напевно, це можна об'єднати з селектором, який вище */
-.button-training__blu {
     color: var(--second-bg);
 }
 
 .button-training__blu:hover {
     background-color: var(--second-bg);
-    border: none;
     box-shadow: none;
     color: var(--main-bg);
 }
@@ -87,17 +83,24 @@ body {
     .container {
         max-width: 610px;
     }
-    .btn {
+    .btn button {
+        font-size: 16px;
+    }
+    .button-training__blu {
         font-size: 16px;
     }
     .tlt {
         font-size: 30px;
+        margin: 0 0 30px 0;
     }
 }
 
 @media screen and (max-width: 576px) {
     .container {
         max-width: 460px;
+    }
+    .tlt {
+        margin: 0 0 20px 0;
     }
 }
 

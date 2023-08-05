@@ -12,7 +12,7 @@ import '../../HomePage/TrainingSection/TrainingListSection.css';
 import '../../HomePage/TrainingSection/carousel.css';
 
 const TrainingCarouselSection = ({ filteredTrainingData }) => (
-    <section id='training' className='training'>
+    <section id='training' className='training__carousel'>
         <div className='container'>
             <div className='training__title tlt vetrino'>
                 <h2>Інші тренування</h2>
