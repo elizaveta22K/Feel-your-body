@@ -5,13 +5,16 @@ import reviewsArrow from '../../../../../img/components/icon6.png';
 
 const TrainingCarouselArrow = ({
     className,
+    additionalClassName, 
     style,
     onClick,
     direction = 'next',
 }) => {
+    const combinedClassName = `${className} ${additionalClassName}`; 
+
     return (
         <img
-            className={className}
+            className={combinedClassName}
             src={reviewsArrow}
             style={{
                 ...style,
@@ -28,6 +31,7 @@ const TrainingCarouselArrow = ({
 
 TrainingCarouselArrow.propTypes = {
     className: PropTypes.string,
+    additionalClassName: PropTypes.string, // Додано PropTypes для additionalClassName
     style: PropTypes.object,
     onClick: PropTypes.func.isRequired,
     direction: PropTypes.oneOf(['next', 'prev']),

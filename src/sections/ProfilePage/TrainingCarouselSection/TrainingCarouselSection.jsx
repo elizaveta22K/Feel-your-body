@@ -53,8 +53,18 @@ const TrainingCarouselSection = ({ filteredTrainingData }) => {
                     dots={false}
                     infinite={true}
                     speed={500}
-                    prevArrow={<TrainingCarouselArrow direction='prev' />}
-                    nextArrow={<TrainingCarouselArrow direction='next' />}
+                    prevArrow={
+                        <TrainingCarouselArrow
+                            direction='prev'
+                            additionalClassName='custom-arrow'
+                        />
+                    }
+                    nextArrow={
+                        <TrainingCarouselArrow
+                            direction='next'
+                            additionalClassName='custom-arrow'
+                        />
+                    }
                     responsive={responsiveSettings}
                 >
                     {Object.entries(filteredTrainingData).map(
