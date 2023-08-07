@@ -1,26 +1,117 @@
 .training__carousel {
     margin: 150px 0 150px 0;
 }
+
 .carusel-block {
     display: inline-flex;
     flex-direction: column;
     text-align: center;
     padding: 0 25px 0 25px;
 }
+
 .carusel-block__img img {
     border-radius: 200px 0px;
     max-width: 100%;
     min-height: 473px;
 }
+
 .carusel-block div:not(:last-child) {
     margin: 0 0 20px 0;
 }
+
 .carusel-block__sub {
-    flex: 1 1 auto;
+    height: 80px;
 }
+
 .carusel-block__btn {
     transform: translateY(113%);
 }
+
 .carusel-block__btn.kids {
     transform: translateY(75%);
+}
+
+.slick-arrow.slick-next {
+    right: 450px;
+    top: 750px;
+}
+
+.slick-arrow.slick-prev {
+    left: 450px;
+    top: 735px;
+}
+@media screen and (max-width: 1110px) {
+    .slick-arrow.slick-next {
+        right: 350px;
+        top: 800px;
+    }
+    .slick-arrow.slick-prev {
+        left: 350px;
+        top: 785px;
+    }
+    .carusel-block__img img {
+        max-height: 473px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .slick-arrow.slick-next {
+        right: 250px;
+        top: 800px;
+    }
+    .slick-arrow.slick-prev {
+        left: 250px;
+        top: 785px;
+    }
+    .carusel-block__img img {
+        border-radius: 120px 0px;
+        max-height: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slick-arrow.slick-next {
+        right: 150px;
+        top: 725px;
+    }
+    .slick-arrow.slick-prev {
+        left: 150px;
+        top: 712px;
+    }
+}
+
+@media screen and (max-width: 588px) {
+    .carusel-block__button {
+        transform: translateX(6%);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .slick-arrow.slick-next {
+        right: 50px;
+        top: 665px;
+    }
+    .slick-arrow.slick-prev {
+        left: 50px;
+        top: 650px;
+    }
+    .carusel-block__img img {
+        border-radius: 70px 0px;
+        min-height: 285px;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    .slick-arrow.slick-next {
+        right: 50px;
+        top: 615px;
+    }
+    .slick-arrow.slick-prev {
+        left: 50px;
+        top: 600px;
+    }
+    .carusel-block__sub {
+        height: 100px;
+    }
 }
