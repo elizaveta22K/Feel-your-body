@@ -27,7 +27,17 @@ export const MOCKED_TRAININGS_DATA = {
         title: 'SEXY сідниці',
         subtitle:
             'Тренуємось та створюємо омріяні пружні сідниці та здорове тіло!',
-        videos: ['video_url_SEXY_1.mp4', 'video_url_SEXY_2.mp4'],
+
+        videos: [
+            'video_url_SEXY_1.mp4',
+            'video_url_SEXY_2.mp4',
+            'video_url_SEXY_3.mp4',
+            'video_url_SEXY_4.mp4',
+            'video_url_SEXY_5.mp4',
+            'video_url_SEXY_6.mp4',
+            'video_url_SEXY_7.mp4',
+            'video_url_SEXY_8.mp4',
+        ],
     },
     [MOCKED_TRAININGS_TYPES.functional_training]: {
         src: functionalPhoto,
@@ -39,6 +49,9 @@ export const MOCKED_TRAININGS_DATA = {
             'video_url_Functional_1.mp4',
             'video_url_Functional_2.mp4',
             'video_url_Functional_3.mp4',
+            'video_url_Functional_4.mp4',
+            'video_url_Functional_5.mp4',
+            'video_url_Functional_6.mp4',
         ],
     },
     [MOCKED_TRAININGS_TYPES.stretching]: {
@@ -52,6 +65,10 @@ export const MOCKED_TRAININGS_DATA = {
             'video_url_Stretching_2.mp4',
             'video_url_Stretching_3.mp4',
             'video_url_Stretching_4.mp4',
+            'video_url_Stretching_5.mp4',
+            'video_url_Stretching_6.mp4',
+            'video_url_Stretching_7.mp4',
+            'video_url_Stretching_8.mp4',
         ],
     },
     [MOCKED_TRAININGS_TYPES.stretching_kids]: {

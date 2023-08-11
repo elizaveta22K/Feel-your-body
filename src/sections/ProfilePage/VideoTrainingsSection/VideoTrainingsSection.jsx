@@ -4,8 +4,10 @@ import PropTypes from 'prop-types';
 import Select from '../../../components/Select/Select';
 import VideoPlayer from '../../../components/VideoPlayer/VideoPlayer';
 import Button from '../../../components/Button/Button';
+import styles from './VideoTrainingsSection.module.css';
 
 import { MOCKED_TRAININGS_DATA } from '../../../pages/ProfilePage/constants';
+
 
 const VideoTrainingsSection = ({
     selectedTrainingType,
@@ -39,38 +41,51 @@ const VideoTrainingsSection = ({
         }));
 
     return (
-        <section>
-            <Select
-                options={formatSelectOptions(MOCKED_TRAININGS_DATA)}
-                selectedOptionValue={selectedTrainingType}
-                onChange={handleSelectChange}
-            />
-            <div>
-                {Object.entries(MOCKED_TRAININGS_DATA).map(
-                    ([trainingType, trainingData]) => (
-                        <div key={trainingType}>
-                            {selectedTrainingType === trainingType &&
-                                trainingData.videos.map(
-                                    (videoSource, videoIndex) => (
-                                        <Button
-                                            key={videoIndex}
-                                            onClick={() =>
-                                                handleSelectTrainingVideo(
-                                                    videoSource
-                                                )
-                                            }
-                                        >
-                                            {`Тренування ${videoIndex + 1}`}
-                                        </Button>
-                                    )
-                                )}
-                        </div>
-                    )
-                )}
+        <section className={styles.videoTrainings}>
+            <div className='container'>
+                <div
+                    className={`videoTrainingsButton ${styles.videoTrainingsButton}`}
+                >
+                    <Select
+                        options={formatSelectOptions(MOCKED_TRAININGS_DATA)}
+                        selectedOptionValue={selectedTrainingType}
+                        onChange={handleSelectChange}
+                    />
+                </div>
+
+                <div className={styles.videoTrainingsBlock}>
+                    <div className={styles.videoTrainingsNumber}>
+                        {Object.entries(MOCKED_TRAININGS_DATA).map(
+                            ([trainingType, trainingData]) => (
+                                <div key={trainingType}>
+                                    {selectedTrainingType === trainingType &&
+                                        trainingData.videos.map(
+                                            (videoSource, videoIndex) => (
+                                                <Button
+                                                    key={videoIndex}
+                                                    onClick={() =>
+                                                        handleSelectTrainingVideo(
+                                                            videoSource
+                                                        )
+                                                    }
+                                                >
+                                                    {`Тренування ${
+                                                        videoIndex + 1
+                                                    }`}
+                                                </Button>
+                                            )
+                                        )}
+                                </div>
+                            )
+                        )}
+                    </div>
+                    <div className={styles.videoTrainingsVideo}>
+                        {trainingVideoSource && (
+                            <VideoPlayer videoSource={trainingVideoSource} />
+                        )}
+                    </div>
+                </div>
             </div>
-            {trainingVideoSource && (
-                <VideoPlayer videoSource={trainingVideoSource} />
-            )}
         </section>
     );
 };
