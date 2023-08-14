@@ -50,7 +50,7 @@ const VideoTrainingsSection = ({
                     className={`videoTrainingsButton ${styles.videoTrainingsButton}`}
                 >
                     <Select
-                        className={styles.videoTrainings} // TODO: for example
+                        className={styles.videoTrainingsSelectCustom} 
                         options={formatSelectOptions(MOCKED_TRAININGS_DATA)}
                         selectedOptionValue={selectedTrainingType}
                         onChange={handleSelectChange}
