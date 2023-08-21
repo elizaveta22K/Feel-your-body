@@ -7,6 +7,7 @@ const TrainingCard = ({
     title,
     subtitle,
     photo,
+    icon,
     numerosity,
     time,
     gift,
@@ -22,11 +23,18 @@ const TrainingCard = ({
                 <div className='info-training__title vetrino'>{title}</div>
                 <div className='info-training__subtitle'>{subtitle}</div>
                 <div className='info-training__picture picture-training'>
-                    {numerosity && (
-                        <div className='picture-training__number1 picture-training__text'>
-                            {numerosity}
-                        </div>
-                    )}
+                    <div className='picture-training__numerosity'>
+                        {<img src={icon} /> && (
+                            <div className='picture-training__icon'>
+                                <img src={icon} />
+                            </div>
+                        )}
+                        {numerosity && (
+                            <div className='picture-training__text'>
+                                {numerosity}
+                            </div>
+                        )}
+                    </div>
                     {time && (
                         <div className='picture-training__time picture-training__text'>
                             {time}
@@ -58,9 +66,9 @@ TrainingCard.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-	 numerosity: PropTypes.string,
+    numerosity: PropTypes.string,
     time: PropTypes.string,
-	 gift: PropTypes.string,
+    gift: PropTypes.string,
     price: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
 };
