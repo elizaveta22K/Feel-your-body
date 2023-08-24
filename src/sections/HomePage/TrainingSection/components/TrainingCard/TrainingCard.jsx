@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Button from '../../../../../components/Button/Button';
+
+import { ROUTES } from '../../../../../constants';
 
 const TrainingCard = ({
     title,
@@ -52,9 +55,12 @@ const TrainingCard = ({
                         <Button>{'Купити'}</Button>
                     </div>
                     <div className='button-training_blu'>
-                        <Button className='button-training__blu'>
-                            {'Детальніше'}
-                        </Button>
+                        <Link
+                            className='button-training__blu'
+                            to={ROUTES.details}
+                        >
+                            Детальніше
+                        </Link>
                     </div>
                 </div>
             </div>
