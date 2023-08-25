@@ -3,6 +3,10 @@ import sexyPhoto from '../../../img/photo/trainings/photo2.jpg';
 import kidsPhoto from '../../../img/photo/trainings/photo3.jpg';
 import functionalPhoto from '../../../img/photo/trainings/photo4.jpg';
 import healthyPhoto from '../../../img/photo/trainings/photo5.jpg';
+import stretchingIcon from '../../../img/components/icon10.svg';
+import sexyIcon from '../../../img/components/icon14.png';
+import kidsIcon from '../../../img/components/icon9.png';
+import functionalIcon from '../../../img/components/icon13.png';
 
 export const MOCKED_TRAININGS_LIST = [
     {
@@ -10,6 +14,7 @@ export const MOCKED_TRAININGS_LIST = [
         title: 'Stretching',
         subtitle:
             'Ефективні тренування для розвитку гнучкості без шкоди для здоров‘я',
+        icon: stretchingIcon,
         numerosity: '8 тренувань',
         time: '2 місяці доступу',
         price: '600 грн',
@@ -19,6 +24,7 @@ export const MOCKED_TRAININGS_LIST = [
         photo: sexyPhoto,
         title: 'SEXY сідниці',
         subtitle: 'Ефективні тренування від яких дійсно збільшуються сідниці!',
+        icon: sexyIcon,
         numerosity: '8 тренувань',
         time: '2 місяці доступу',
         gift: '+ харчування в подарунок',
@@ -30,6 +36,7 @@ export const MOCKED_TRAININGS_LIST = [
         title: 'Stretching KIDS',
         subtitle:
             'Тренування, яке включає в себе велику кількість різних вправ, що сприяють розвитку фізичних здібностей дитини',
+        icon: kidsIcon,
         numerosity: '8 тренувань',
         time: '2 місяці доступу',
         price: '600 грн',
@@ -40,6 +47,7 @@ export const MOCKED_TRAININGS_LIST = [
         title: 'Functional training',
         subtitle:
             'Інтенсивне функціональне тренування, що подарує вам бажаний результат!',
+        icon: functionalIcon,
         numerosity: '8 тренувань',
         time: '2 місяці доступу',
         price: '600 грн',

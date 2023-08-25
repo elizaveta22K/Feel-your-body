@@ -92,12 +92,6 @@ const TrainingCarouselSection = ({ filteredTrainingData }) => {
                                     </div>
                                 </div>
                                 <div className='carusel-block__button'>
-                                    {/* <a
-                                        href={'#'}
-                                        className='button-training__blu'
-                                    >
-                                        <span>Детальніше</span>
-                                    </a> */}
                                     <Link
                                         className='button-training__blu'
                                         to={ROUTES.details}

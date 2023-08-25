@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Button from '../../../../../components/Button/Button';
+
+import { ROUTES } from '../../../../../constants';
 
 const TrainingCard = ({
     title,
     subtitle,
     photo,
+    icon,
     numerosity,
     time,
     gift,
@@ -22,11 +26,18 @@ const TrainingCard = ({
                 <div className='info-training__title vetrino'>{title}</div>
                 <div className='info-training__subtitle'>{subtitle}</div>
                 <div className='info-training__picture picture-training'>
-                    {numerosity && (
-                        <div className='picture-training__number1 picture-training__text'>
-                            {numerosity}
-                        </div>
-                    )}
+                    <div className='picture-training__numerosity'>
+                        {<img src={icon} /> && (
+                            <div className='picture-training__icon'>
+                                <img src={icon} />
+                            </div>
+                        )}
+                        {numerosity && (
+                            <div className='picture-training__text'>
+                                {numerosity}
+                            </div>
+                        )}
+                    </div>
                     {time && (
                         <div className='picture-training__time picture-training__text'>
                             {time}
@@ -44,9 +55,12 @@ const TrainingCard = ({
                         <Button>{'Купити'}</Button>
                     </div>
                     <div className='button-training_blu'>
-                        <Button className='button-training__blu'>
-                            {'Детальніше'}
-                        </Button>
+                        <Link
+                            className='button-training__blu'
+                            to={ROUTES.details}
+                        >
+                            Детальніше
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -58,9 +72,9 @@ TrainingCard.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     photo: PropTypes.string.isRequired,
-	 numerosity: PropTypes.string,
+    numerosity: PropTypes.string,
     time: PropTypes.string,
-	 gift: PropTypes.string,
+    gift: PropTypes.string,
     price: PropTypes.string.isRequired,
     className: PropTypes.string.isRequired,
 };
